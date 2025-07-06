@@ -1,0 +1,167 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto:wght@400;500;700&display=swap');
+
+/* Custom CSS Variables */
+:root {
+    --medical-blue: #2c5aa0;
+    --medical-green: #28a745;
+    --soft-gray: #f8f9fa;
+    --font-primary: 'Roboto', sans-serif;
+    --font-secondary: 'Inter', sans-serif;
+}
+
+/* Body and Typography */
+body {
+    font-family: var(--font-primary);
+    color: #333;
+    padding-top: 56px; /* Adjusted for fixed navbar */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-secondary);
+    font-weight: 700;
+}
+
+/* Navbar Customization */
+.navbar {
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #555;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: var(--medical-blue);
+}
+
+.navbar-light .navbar-brand {
+    color: var(--medical-blue);
+    font-weight: 700;
+}
+
+/* Hero Section */
+#hero {
+    background: linear-gradient(45deg, var(--medical-blue), var(--medical-green));
+    animation: gradient-animation 10s ease infinite;
+}
+
+@keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Medical Button */
+.btn-medical {
+    background-color: var(--medical-blue);
+    color: #fff;
+    border: 2px solid var(--medical-blue);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-medical:hover {
+    background-color: #fff;
+    color: var(--medical-blue);
+}
+
+/* Service Cards */
+.service-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.service-card .icon {
+    font-size: 3rem;
+    color: var(--medical-blue);
+    margin-bottom: 15px;
+}
+
+/* Form Customization */
+.form-control:focus {
+    border-color: var(--medical-blue);
+    box-shadow: 0 0 0 0.25rem rgba(44, 90, 160, 0.25);
+}
+
+/* Floating WhatsApp Button */
+.floating-whatsapp-btn {
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Animations and Transitions */
+.smooth-transition {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Shadows */
+.professional-shadow {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* Testimonials */
+.testimonial {
+    background-color: var(--soft-gray);
+    padding: 30px;
+    border-left: 5px solid var(--medical-blue);
+    margin-bottom: 20px;
+}
+
+/* Appointment Button */
+.appointment-btn {
+    background-color: var(--medical-green);
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.appointment-btn:hover {
+    background-color: #218838;
+}
+
+/* Responsive Utilities */
+@media (max-width: 768px) {
+    .hero-text {
+        font-size: 1.5rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    body {
+        padding-top: 0;
+    }
+
+    .navbar, .floating-whatsapp-btn, #backToTop {
+        display: none;
+    }
+
+    .service-card {
+        page-break-inside: avoid;
+    }
+}
