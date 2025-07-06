@@ -204,3 +204,32 @@ h1, h2, h3, h4, h5, h6 {
         page-break-inside: avoid;
     }
 }
+
+.footer-social-icon {
+    font-size: 1.7rem;
+    vertical-align: middle;
+    transition: transform 0.2s, filter 0.2s;
+    display: inline-block;
+}
+.footer-social-icon.facebook i {
+    color: #1877f3;
+}
+.footer-social-icon.instagram i {
+    color: #e4405f;
+}
+.footer-social-icon.linkedin i {
+    color: #0a66c2;
+}
+.footer-social-icon:hover {
+    transform: scale(1.18) rotate(-5deg);
+    filter: brightness(1.2);
+}
+.footer-contact-link {
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+.footer-contact-link:hover {
+    color: var(--medical-green);
+    text-decoration: underline;
+}
