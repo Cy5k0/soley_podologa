@@ -47,7 +47,42 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "Amatic SC", sans-serif;
     font-weight: 700;
     font-style: normal;
+    font-size: 1.2em;
+}
+
+/* Navbar Logo Styles */
+.navbar-logo {
+    height: 55px;
+    width: auto;
+    max-width: 140px;
+    object-fit: contain;
+}
+
+.navbar-brand-text {
     font-size: 1.8em;
+}
+
+/* Responsive navbar logo */
+@media (max-width: 768px) {
+    .navbar-logo {
+        height: 40px;
+        max-width: 100px;
+    }
+    
+    .navbar-brand-text {
+        font-size: 1.4em;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-logo {
+        height: 32px;
+        max-width: 70px;
+    }
+    
+    .navbar-brand-text {
+        font-size: 1.2em;
+    }
 }
 
 /* Hero Section */
