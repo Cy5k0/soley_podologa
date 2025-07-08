@@ -40,6 +40,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="assets/css/modal-horarios.css">
 
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
@@ -128,7 +129,7 @@
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                             <li class="nav-item"><a class="nav-link active" aria-current="page" href="#hero">Inicio</a></li>
                             <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#horarios">Horarios</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#horarios" data-bs-toggle="modal" data-bs-target="#horariosModal">Horarios</a></li>
                             <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre Mí</a></li>
                             <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
                         </ul>
@@ -335,6 +336,25 @@
     </div>
     <!-- Add other modals here -->
 
+    <!-- Modal de Horarios -->
+    <div class="modal fade modal-horarios" id="horariosModal" tabindex="-1" aria-labelledby="horariosModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="horariosModalLabel">Horarios de Atención</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="horarios-list">
+                        <li><span class="horarios-icon"><i class="bi bi-clock"></i></span>Lunes a Viernes: 9:00 - 18:00</li>
+                        <li><span class="horarios-icon"><i class="bi bi-clock"></i></span>Sábado: 9:00 - 14:00</li>
+                        <li><span class="horarios-icon"><i class="bi bi-clock-history"></i></span>Domingo: Cerrado</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer class="bg-dark text-white text-center p-3">
         <div class="container">
             <p>&copy; 2025 Soley Pérez Hernández. Todos los derechos reservados.</p>
@@ -366,6 +386,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom JS -->
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/modal-horarios.js"></script>
     <!-- <script src="https://www.google.com/recaptcha/api.js?render=YOUR_RECAPTCHA_SITE_KEY"></script> -->
 </body>
 </html>

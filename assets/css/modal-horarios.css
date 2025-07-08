@@ -1,0 +1,111 @@
+/* Estilos para el Modal de Horarios de Atención */
+
+/* Variables de color */
+:root {
+  --modal-bg-color: #ffffff;
+  --modal-header-bg-start: #f8f9fa;
+  --modal-header-bg-end: #e9ecef;
+  --modal-shadow-color: rgba(0, 0, 0, 0.25);
+  --modal-icon-color: #0d6efd;
+  --modal-text-color: #212529;
+  --modal-border-color: #dee2e6;
+  --modal-hover-bg: #f1f3f5;
+}
+
+/* Estilo general del modal */
+.modal-horarios .modal-content {
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 10px 40px var(--modal-shadow-color);
+  overflow: hidden; /* Para que el gradiente del header no se salga de los bordes redondeados */
+}
+
+/* Animación de entrada/salida */
+.modal.fade .modal-dialog {
+  transition: transform 0.3s ease-out;
+}
+
+/* Header del modal con gradiente sutil */
+.modal-horarios .modal-header {
+  background: linear-gradient(to right, var(--modal-header-bg-start), var(--modal-header-bg-end));
+  border-bottom: 1px solid var(--modal-border-color);
+  padding: 1rem 1.5rem;
+}
+
+.modal-horarios .modal-title {
+  font-weight: 600;
+  color: var(--modal-text-color);
+}
+
+/* Botón de cierre estilizado */
+.modal-horarios .btn-close {
+  background-color: transparent;
+  border-radius: 50%;
+  padding: 0.5rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.modal-horarios .btn-close:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  transform: scale(1.1);
+}
+
+/* Cuerpo del modal */
+.modal-horarios .modal-body {
+  padding: 2rem;
+  color: var(--modal-text-color);
+}
+
+.horarios-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.horarios-list li {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 0;
+  font-size: 1.1rem;
+  border-bottom: 1px solid var(--modal-border-color);
+  transition: background-color 0.2s ease;
+}
+
+.horarios-list li:last-child {
+  border-bottom: none;
+}
+
+.horarios-list li:hover {
+    background-color: var(--modal-hover-bg);
+    border-radius: 5px;
+}
+
+/* Icono de reloj */
+.horarios-icon {
+  color: var(--modal-icon-color);
+  font-size: 1.5rem;
+  margin-right: 15px;
+  width: 30px;
+  text-align: center;
+}
+
+/* Footer del modal */
+.modal-horarios .modal-footer {
+    border-top: 1px solid var(--modal-border-color);
+    background-color: #f8f9fa;
+}
+
+/* Diseño responsive para móviles */
+@media (max-width: 576px) {
+  .modal-horarios .modal-body {
+    padding: 1.5rem;
+  }
+
+  .horarios-list li {
+    font-size: 1rem;
+  }
+
+  .modal-horarios .modal-title {
+    font-size: 1.25rem;
+  }
+}
