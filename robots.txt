@@ -1,4 +1,9 @@
+# Allow all crawlers full access to the site.
 User-agent: *
 Allow: /
 
+# Disallow access to component files that don't need to be indexed directly.
+Disallow: /assets/components/
+
+# Location of sitemap file
 Sitemap: https://www.soley-podologia.cl/sitemap.xml
