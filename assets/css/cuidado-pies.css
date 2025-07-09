@@ -1,0 +1,112 @@
+/* assets/css/cuidado-pies.css */
+
+/* Hero Section for Tips Page */
+.hero-section-tips {
+    background: linear-gradient(rgba(44, 90, 160, 0.7), rgba(40, 167, 69, 0.5)), url('https://images.unsplash.com/photo-1605548154442-57b57b1d06a5?q=80&w=2070&auto=format&fit=crop') no-repeat center center;
+    background-size: cover;
+    min-height: 60vh;
+    position: relative;
+}
+
+/* Tip Cards Styling */
+.tip-card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.tip-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+}
+
+.tip-card .card-img-top {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.tip-card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+.tip-card .card-body {
+    padding: 1.5rem;
+}
+
+.tip-card .card-title {
+    color: var(--medical-blue);
+    font-weight: 700;
+}
+
+/* Product Section Styling */
+#productos-recomendados {
+    border-radius: 15px;
+}
+
+.product-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.product-card .img-fluid {
+    object-fit: cover;
+    height: 100%;
+}
+
+.affiliate-btn {
+    background-color: var(--medical-green);
+    border-color: var(--medical-green);
+    font-weight: 500;
+}
+
+.affiliate-btn:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+/* CTA Section */
+#cta-agendar {
+    background-color: var(--soft-gray);
+    border-radius: 15px;
+    padding: 4rem 2rem;
+}
+
+/* Scroll Animations (requires JS intersection observer) */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 991.98px) {
+    .hero-section-tips {
+        min-height: 50vh;
+    }
+    .tip-card {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .hero-section-tips {
+        min-height: 40vh;
+    }
+    .product-card .img-fluid {
+        border-radius: 10px 10px 0 0;
+    }
+}
