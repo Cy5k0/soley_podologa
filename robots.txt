@@ -6,4 +6,4 @@ Allow: /
 Disallow: /assets/components/
 
 # Location of sitemap file
-Sitemap: https://www.soley-podologia.cl/sitemap.xml
+Sitemap: https://www.podologialoslagos.com/sitemap.xml
