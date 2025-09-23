@@ -52,9 +52,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Navbar Logo Styles */
 .navbar-logo {
-    height: 85px; /*55px*/
-    width: auto;
-    max-width: 140px;
+    height: 85px;
+    width: 250px;
     object-fit: contain;
 }
 
