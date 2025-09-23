@@ -80,6 +80,17 @@
     padding: 4rem 2rem;
 }
 
+/* Article Image Styling */
+#tips-content article img {
+    max-width: 600px;
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
 /* Scroll Animations (requires JS intersection observer) */
 .reveal-on-scroll {
     opacity: 0;
