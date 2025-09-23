@@ -65,7 +65,8 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 768px) {
     .navbar-logo {
         height: 40px;
-        max-width: 100px;
+        width: 120px;
+        object-fit: contain;
     }
     
     .navbar-brand-text {
@@ -76,7 +77,8 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 576px) {
     .navbar-logo {
         height: 32px;
-        max-width: 70px;
+        width: 95px;
+        object-fit: contain;
     }
     
     .navbar-brand-text {
