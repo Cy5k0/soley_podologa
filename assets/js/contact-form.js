@@ -39,9 +39,9 @@ function showMessage(text, type) {
 
     alertContainer.innerHTML = ''; // Limpiar alertas anteriores
     const alertMsg = document.createElement('div');
-    alertMsg.className = `alert alert-${type === 'error' ? 'danger' : 'success'} mt-3`;
+    alertMsg.className = `alert alert-${type === 'error' ? 'danger' : 'success'} alert-dismissible fade show mt-3`;
     alertMsg.setAttribute('role', 'alert');
-    alertMsg.textContent = text;
+    alertMsg.innerHTML = `<strong>${text}</strong><button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>`;
     alertContainer.appendChild(alertMsg);
 }
 
@@ -114,9 +114,8 @@ document.addEventListener('DOMContentLoaded', function() {
         if(spinner) spinner.classList.remove('d-none');
         
         // Cambiar el texto del botón. Se asume que el texto es el último nodo hijo.
-        if (submitButton.lastChild.nodeType === Node.TEXT_NODE) {
-            submitButton.lastChild.textContent = ' Enviando...';
-        }
+        const originalText = submitButton.innerHTML;
+        submitButton.innerHTML = `<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Enviando...`;
 
         try {
             // Enviar los datos al servicio de backend (AWS SNS)
@@ -129,11 +128,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } finally {
             // Rehabilitar el botón y ocultar el spinner
             submitButton.disabled = false;
-            if(spinner) spinner.classList.add('d-none');
-            
-            if (submitButton.lastChild.nodeType === Node.TEXT_NODE) {
-                submitButton.lastChild.textContent = ' Enviar Mensaje';
-            }
+            submitButton.innerHTML = originalText;
         }
     });
 });

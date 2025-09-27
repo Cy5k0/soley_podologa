@@ -3,21 +3,21 @@
 /* Variables de color */
 :root {
   --modal-bg-color: #ffffff;
-  --modal-header-bg-start: #f8f9fa;
-  --modal-header-bg-end: #e9ecef;
+  --modal-header-bg-start: var(--primary-blue);
+  --modal-header-bg-end: var(--primary-teal);
   --modal-shadow-color: rgba(0, 0, 0, 0.25);
-  --modal-icon-color: #0d6efd;
-  --modal-text-color: #212529;
-  --modal-border-color: #dee2e6;
-  --modal-hover-bg: #f1f3f5;
+  --modal-icon-color: var(--primary-blue);
+  --modal-text-color: var(--text-dark);
+  --modal-border-color: var(--border-color);
+  --modal-hover-bg: var(--light-blue);
 }
 
 /* Estilo general del modal */
 .modal-horarios .modal-content {
-  border-radius: 15px;
+  border-radius: var(--border-radius-lg);
   border: none;
-  box-shadow: 0 10px 40px var(--modal-shadow-color);
-  overflow: hidden; /* Para que el gradiente del header no se salga de los bordes redondeados */
+  box-shadow: var(--shadow-medium);
+  overflow: hidden;
 }
 
 /* Animación de entrada/salida */
@@ -25,16 +25,17 @@
   transition: transform 0.3s ease-out;
 }
 
-/* Header del modal con gradiente sutil */
+/* Header del modal con gradiente */
 .modal-horarios .modal-header {
-  background: linear-gradient(to right, var(--modal-header-bg-start), var(--modal-header-bg-end));
-  border-bottom: 1px solid var(--modal-border-color);
-  padding: 1rem 1.5rem;
+  background: linear-gradient(135deg, var(--modal-header-bg-start), var(--modal-header-bg-end));
+  border-bottom: none;
+  padding: 1.25rem 1.5rem;
 }
 
 .modal-horarios .modal-title {
-  font-weight: 600;
-  color: var(--modal-text-color);
+  font-weight: 700;
+  color: #fff;
+  font-size: 1.5rem;
 }
 
 /* Botón de cierre estilizado */
@@ -42,11 +43,12 @@
   background-color: transparent;
   border-radius: 50%;
   padding: 0.5rem;
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  transition: var(--transition);
+  filter: invert(1) grayscale(100%) brightness(200%);
 }
 
 .modal-horarios .btn-close:hover {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.2);
   transform: scale(1.1);
 }
 
@@ -65,10 +67,11 @@
 .horarios-list li {
   display: flex;
   align-items: center;
-  padding: 0.75rem 0;
+  padding: 1rem 0;
   font-size: 1.1rem;
   border-bottom: 1px solid var(--modal-border-color);
-  transition: background-color 0.2s ease;
+  transition: var(--transition);
+  align-items: center;
 }
 
 .horarios-list li:last-child {
@@ -77,22 +80,28 @@
 
 .horarios-list li:hover {
     background-color: var(--modal-hover-bg);
-    border-radius: 5px;
+    border-radius: var(--border-radius);
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
 }
 
 /* Icono de reloj */
 .horarios-icon {
   color: var(--modal-icon-color);
-  font-size: 1.5rem;
-  margin-right: 15px;
-  width: 30px;
+  font-size: 1.8rem;
+  margin-right: 1rem;
+  width: 40px;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Footer del modal */
 .modal-horarios .modal-footer {
     border-top: 1px solid var(--modal-border-color);
-    background-color: #f8f9fa;
+    background-color: var(--soft-gray);
+    padding: 1rem 1.5rem;
 }
 
 /* Diseño responsive para móviles */
@@ -103,6 +112,13 @@
 
   .horarios-list li {
     font-size: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .horarios-icon {
+    margin-right: 0;
   }
 
   .modal-horarios .modal-title {
