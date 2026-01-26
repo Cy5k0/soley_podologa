@@ -1,33 +1,123 @@
 /* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;700&family=Tangerine:wght@400;700&display=swap');
 
 /* Custom CSS Variables */
 :root {
-    --primary-blue: #1a3a6c;
-    --primary-green: #28a745;
-    --primary-teal: #20c997;
-    --secondary-blue: #4a6fa5;
-    --light-blue: #e6f0fa;
-    --soft-gray: #f8f9fa;
-    --dark-gray: #495057;
-    --text-dark: #212529;
-    --text-light: #6c757d;
-    --border-color: #dee2e6;
-    --shadow-light: 0 4px 12px rgba(0,0,0,0.08);
-    --shadow-medium: 0 8px 24px rgba(0,0,0,0.1);
-    --shadow-hover: 0 12px 30px rgba(0,0,0,0.15);
+    /* New Earth Tone Palette */
+    --primary-blue: #849c84;    /* Sage Green (Main) - Replacing Blue */
+    --primary-green: #889576;   /* Olive (Secondary) - Replacing Green */
+    --primary-teal: #98a38b;    /* Muted Green - Replacing Teal */
+    --secondary-blue: #cdaa6a;  /* Gold - Replacing Secondary Blue */
+    
+    --light-blue: #d4d9cc;      /* Light Sage - Replacing Light Blue */
+    --soft-gray: #fbfaea;       /* Cream - Replacing Soft Gray */
+    --dark-gray: #41433d;       /* Dark Olive/Grey - Replacing Dark Gray */
+    
+    --text-dark: #41433d;       /* Dark Olive/Grey */
+    --text-light: #8c8c84;      /* Grey */
+    
+    --border-color: #dcdcd4;    /* Light Grey/Beige */
+    
+    /* Extra Palette Colors available for use */
+    --color-gold: #cdaa6a;
+    --color-tan: #bcac76;
+    --color-beige: #d9d8bf;
+    --color-greige: #c4c4b7;
+    --color-light-beige: #f0f0d2;
+    --color-slate: #bcbfb4;
+
+    --shadow-light: 0 4px 12px rgba(65, 67, 61, 0.08);
+    --shadow-medium: 0 8px 24px rgba(65, 67, 61, 0.1);
+    --shadow-hover: 0 12px 30px rgba(65, 67, 61, 0.15);
+    
     --font-primary: 'Poppins', sans-serif;
     --font-secondary: 'Montserrat', sans-serif;
+    --font-handwriting: 'Tangerine', cursive;
+    
+    --border-radius: 12px;
+    --border-radius-lg: 18px;
     --border-radius: 12px;
     --border-radius-lg: 18px;
     --transition: all 0.3s ease;
+}
+
+/* --- Bootstrap Overrides --- */
+.alert-success {
+    background-color: var(--primary-green);
+    border-color: var(--primary-green);
+    color: #fff;
+}
+
+.alert-success .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+.text-primary {
+    color: var(--primary-blue) !important;
+}
+
+.bg-primary {
+    background-color: var(--primary-blue) !important;
+}
+
+.btn-primary {
+    background-color: var(--primary-blue);
+    border-color: var(--primary-blue);
+    color: #fff;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+    background-color: var(--primary-green) !important;
+    border-color: var(--primary-green) !important;
+    color: #fff !important;
+}
+
+.btn-success {
+    background-color: var(--primary-green);
+    border-color: var(--primary-green);
+    color: #fff;
+}
+
+.btn-success:hover, .btn-success:focus, .btn-success:active {
+    background-color: #6d775e !important; /* Darker Olive */
+    border-color: #5d6650 !important;
+    color: #fff !important;
+}
+
+.btn-outline-primary {
+    color: var(--primary-blue);
+    border-color: var(--primary-blue);
+}
+
+.btn-outline-primary:hover, .btn-outline-primary:active, .btn-outline-primary.active {
+    background-color: var(--primary-blue) !important;
+    border-color: var(--primary-blue) !important;
+    color: #fff !important;
+}
+
+a {
+    color: var(--primary-blue);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--primary-green);
+}
+
+.font-tangerine {
+    font-family: var(--font-handwriting);
+    font-size: 3.5rem; /* Increased size for better visibility */
+    color: var(--primary-blue);
+    line-height: 1;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* Subtle shadow for legibility */
 }
 
 /* Body and Typography */
 body {
     font-family: var(--font-primary);
     color: var(--text-dark);
-    padding-top: 56px; /* Adjusted for fixed navbar */
+    padding-top: 110px; /* Adjusted for taller fixed navbar (Logo + Padding) */
     line-height: 1.6;
     background-color: #ffffff;
 }
@@ -74,19 +164,23 @@ p {
 /* Navbar Customization */
 .navbar {
     transition: var(--transition);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-    background-color: rgba(255, 255, 255, 0.95) !important;
+    box-shadow: 0 2px 10px rgba(65, 67, 61, 0.08); /* Updated shadow color */
+    background-color: rgba(251, 250, 234, 0.95) !important; /* Cream background */
     backdrop-filter: blur(10px);
     z-index: 1050;
 }
 
 .navbar-light .navbar-nav .nav-link {
-    color: var(--text-dark);
-    font-weight: 500;
+    color: var(--text-dark); /* Ensure text is dark enough against cream background */
+    font-weight: 600; /* Increased weight */
+    font-size: 1.1rem; /* Slightly larger text */
     transition: var(--transition);
     position: relative;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1.25rem; /* More horizontal padding */
     border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
 .navbar-light .navbar-nav .nav-link:hover,
@@ -151,6 +245,11 @@ p {
         object-fit: contain;
     }
     
+    .font-tangerine {
+        font-size: 2.5rem; /* Smaller font on tablet/mobile */
+        margin-left: 0.5rem;
+    }
+    
     .navbar-brand-text {
         font-size: 1.4em;
     }
@@ -200,7 +299,7 @@ p {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.15;
+    opacity: 0.5;
 }
 
 .hero-overlay {
@@ -209,7 +308,12 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, rgba(26, 58, 108, 0.7), rgba(32, 201, 151, 0.5));
+    /* Gradiente sutil de crema a sage con baja opacidad para mejor visualización */
+    background: linear-gradient(135deg, 
+        rgba(251, 250, 234, 0.75) 0%,    /* Cream con transparencia */
+        rgba(132, 156, 132, 0.65) 50%,   /* Sage suave */
+        rgba(205, 170, 106, 0.55) 100%   /* Gold muy sutil */
+    );
     z-index: 1;
 }
 
@@ -229,13 +333,14 @@ p {
     font-size: 3.5rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6), 0 0 20px rgba(0,0,0,0.4); /* Sombra más fuerte para legibilidad */
 }
 
 #hero .lead {
     font-size: 1.5rem;
     margin-bottom: 2rem;
-    color: rgba(255, 255, 255, 0.95);
+    color: rgba(255, 255, 255, 0.98);
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.5), 0 0 15px rgba(0,0,0,0.3);
 }
 
 /* Breadcrumb Styling */
@@ -298,8 +403,8 @@ p {
 }
 
 .btn-success:hover {
-    background-color: #218838;
-    border-color: #1e7e34;
+    background-color: #6d775e; /* Darker Olive */
+    border-color: #5d6650;
 }
 
 .btn-outline-primary {
@@ -395,7 +500,7 @@ p {
 .form-control:focus,
 .form-select:focus {
     border-color: var(--primary-blue);
-    box-shadow: 0 0 0 0.25rem rgba(26, 58, 108, 0.15);
+    box-shadow: 0 0 0 0.25rem rgba(132, 156, 132, 0.25); /* Focused Sage with opacity */
     outline: 0;
 }
 
@@ -510,6 +615,10 @@ section {
     padding: 5rem 0;
 }
 
+#hero {
+    padding: 0 !important;
+}
+
 /* About Section */
 #sobre-mi {
     background-color: #fff;
@@ -543,7 +652,7 @@ section {
 
 /* Appointment Button */
 .appointment-btn {
-    background-color: var(--primary-green);
+    background-color: var(--primary-blue);
     color: #fff;
     padding: 1rem 2rem;
     font-size: 1.2rem;
@@ -556,7 +665,7 @@ section {
 }
 
 .appointment-btn:hover {
-    background-color: #218838;
+    background-color: #6d775e; /* Darker Olive */
     transform: translateY(-3px);
     box-shadow: var(--shadow-hover);
 }
@@ -709,9 +818,58 @@ section {
     }
 }
 
+/* Global Modal Customization */
+.modal-content {
+    border-radius: var(--border-radius-lg);
+    border: none;
+    box-shadow: var(--shadow-medium);
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.modal-header {
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-green));
+    border-bottom: none;
+    padding: 1.25rem 1.5rem;
+}
+
+.modal-title {
+    font-weight: 700;
+    color: #fff;
+    font-size: 1.5rem;
+    font-family: var(--font-secondary);
+}
+
+.modal-body {
+    padding: 2rem;
+    color: var(--text-dark);
+}
+
+.modal-footer {
+    border-top: 1px solid var(--border-color);
+    background-color: var(--soft-gray);
+    padding: 1rem 1.5rem;
+}
+
+.modal .btn-close {
+    background-color: transparent;
+    opacity: 1;
+    padding: 0.5rem;
+    transition: var(--transition);
+    filter: invert(1) grayscale(100%) brightness(200%); /* Make generic close button white */
+}
+
+.modal .btn-close:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
 /* Footer Styling */
 footer {
-    background-color: var(--primary-blue) !important;
+    background-color: var(--dark-gray) !important;
+    color: var(--soft-gray);
+    margin: 0;
+    padding: 0;
 }
 
 .footer-social-icon {
@@ -768,4 +926,23 @@ footer {
 .badge {
     font-size: 0.85rem;
     padding: 0.5rem 0.75rem;
+}
+
+.bg-primary {
+    background-color: var(--primary-blue) !important;
+}
+
+.badge.bg-primary {
+    background-color: var(--primary-blue) !important;
+    color: #fff;
+}
+
+/* Footer Styling Reset */
+footer {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    width: 100% !important;
+    background-color: var(--dark-gray) !important; /* Ensure generic footer tag is dark */
 }

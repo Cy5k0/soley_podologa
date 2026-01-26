@@ -145,8 +145,8 @@
 }
 
 .affiliate-btn:hover {
-    background-color: #218838;
-    border-color: #1e7e34;
+    background-color: #6d775e; /* Darker Olive */
+    border-color: #5d6650;
     transform: translateY(-2px);
     box-shadow: var(--shadow-light);
 }
