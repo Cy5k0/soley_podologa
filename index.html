@@ -77,17 +77,25 @@
     <link rel="stylesheet" href="assets/css/custom.css">
     <link rel="stylesheet" href="assets/css/modal-horarios.css">
 
-    <!-- Schema.org Structured Data -->
+    <!-- Schema.org Structured Data - AI-First Optimization -->
+    <!-- Organization Schema: Establece identidad y credibilidad para motores de IA -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "MedicalBusiness",
+      "@type": ["MedicalBusiness", "LocalBusiness", "Organization"],
       "name": "Soley Pérez Hernández - Podología Profesional",
-      "description": "Podóloga profesional en Osorno, Chile, especializada en el cuidado integral de los pies.",
-      "image": "https://www.podologialoslagos.com",
+      "alternateName": "Podología Los Lagos",
+      "description": "Podóloga profesional certificada en Osorno, Chile. Más de 10 años de experiencia como técnico en enfermería, especializada en podología integral, micología del pie, tratamiento de uñas encarnadas y pie diabético.",
+      "image": "https://www.podologialoslagos.com/assets/img/pelosa.png",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.podologialoslagos.com/assets/img/logo_soley_sf.gif",
+        "width": 250,
+        "height": 250
+      },
       "url": "https://www.podologialoslagos.com",
       "telephone": "+56912345678",
-      "priceRange": "$",
+      "priceRange": "$$",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Av. Ejemplo 123",
@@ -104,21 +112,28 @@
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday"
-          ],
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
           "opens": "09:00",
           "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "16:00"
         }
       ],
       "sameAs": [
         "https://www.facebook.com/soley.podologia.osorno",
         "https://www.instagram.com/soley.podologia.osorno"
       ],
+      "founder": {
+        "@type": "Person",
+        "name": "Soley Pérez Hernández",
+        "jobTitle": "Podóloga Certificada y Técnico en Enfermería",
+        "alumniOf": "Formación en Micología del Pie",
+        "hasCredential": "Técnico en Enfermería con más de 10 años de experiencia"
+      },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Servicios de Podología",
@@ -127,17 +142,145 @@
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Tratamiento de uñas encarnadas"
+              "name": "Atención Podológica Básica e Infantil",
+              "description": "Onicotomía, pulido ungueal, pulido plantar y masaje podal",
+              "provider": {
+                "@type": "Organization",
+                "name": "Soley Pérez Hernández - Podología Profesional"
+              }
+            },
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "price": "25000",
+              "priceCurrency": "CLP"
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Cuidado de pie diabético"
+              "name": "Tratamiento de Uñas con Hongos",
+              "description": "Tratamiento especializado para onicomicosis con formación en micología del pie",
+              "provider": {
+                "@type": "Organization",
+                "name": "Soley Pérez Hernández - Podología Profesional"
+              }
+            },
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "price": "30000",
+              "priceCurrency": "CLP"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Tratamiento de Uñas Encarnadas",
+              "description": "Atención básica más tratamiento completo de uñas encarnadas",
+              "provider": {
+                "@type": "Organization",
+                "name": "Soley Pérez Hernández - Podología Profesional"
+              }
+            },
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "price": "40000",
+              "priceCurrency": "CLP"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Cuidado de Pie Diabético",
+              "description": "Cuidado especializado para pacientes con diabetes",
+              "provider": {
+                "@type": "Organization",
+                "name": "Soley Pérez Hernández - Podología Profesional"
+              }
             }
           }
         ]
+      }
+    }
+    </script>
+
+    <!-- FAQPage Schema: CRÍTICO para Google AI Overviews y Answer Engine Optimization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué servicios de podología ofrece Soley Pérez en Osorno?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Soley Pérez ofrece atención podológica básica e infantil, tratamiento de uñas con hongos (onicomicosis), tratamiento de uñas encarnadas, cuidado de pie diabético, ortomixia con brackets, encarrilamiento PTFE, inyecciones intramusculares, curaciones planas y toma de glicemia capilar. Cuenta con más de 10 años de experiencia como técnico en enfermería y formación especializada en micología del pie."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto cuesta una atención podológica básica en Osorno?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La atención podológica básica e infantil tiene un costo de $25.000 CLP. Este servicio incluye onicotomía (corte de uñas), pulido ungueal, pulido plantar y masaje podal. Los adultos mayores reciben un 20% de descuento."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo se tratan las uñas encarnadas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El tratamiento de uñas encarnadas incluye la atención podológica básica más el procedimiento específico para solucionar la uña encarnada. El costo es de $40.000 CLP con un 12,5% de descuento para adultos mayores. En casos crónicos, se pueden utilizar técnicas correctivas como ortomixia con brackets o encarrilamiento PTFE."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué es la ortomixia con brackets y para qué sirve?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La ortomixia con brackets es un sistema correctivo para uñas deformadas o encarnadas mediante brackets especializados. Este tratamiento tiene un costo de $25.000 CLP más $7.000 por dedo tratado, e incluye la atención podológica. Es efectivo para corregir problemas crónicos de uñas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Atiende pacientes con pie diabético?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, Soley Pérez ofrece cuidado especializado para pacientes con pie diabético. Con más de 10 años de experiencia como técnico en enfermería, brinda atención profesional y humana, combinando conocimientos de enfermería con tratamientos podológicos modernos y efectivos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Dónde está ubicada la consulta podológica en Osorno?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La consulta podológica de Soley Pérez se encuentra en el centro de Osorno, Los Lagos, Chile. Para agendar una cita, puedes contactar por WhatsApp al +56912345678 o completar el formulario de contacto en el sitio web."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuáles son los horarios de atención?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Los horarios de atención son: Lunes a Viernes de 9:00 a 18:00 horas, y Sábados de 9:00 a 16:00 horas. Los domingos está cerrado, excepto para emergencias."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Speakable Schema: Optimización para asistentes de voz y lectura por IA -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Soley Pérez - Podóloga Profesional en Osorno",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["#hero h1", "#sobre-mi h2", "#sobre-mi .lead"]
       }
     }
     </script>
@@ -161,221 +304,277 @@
         <!-- El navbar se carga dinámicamente con JavaScript -->
     </header>
 
-    <main id="main-content">
-        <section id="hero">
+    <!-- 
+        MAIN CONTENT: Using <main> semantic tag helps AI identify the primary content area.
+        This is critical for content extraction by AI crawlers and screen readers.
+    -->
+    <main id="main-content" role="main" aria-label="Contenido principal">
+        <!-- 
+            HERO SECTION: Using semantic <section> with proper heading hierarchy.
+            The h1 is unique and identifies the main topic for AI understanding.
+        -->
+        <section id="hero" aria-label="Sección de bienvenida">
             <div class="container-fluid bg-gradient text-white text-center p-5 vh-100 d-flex align-items-center justify-content-center position-relative">
-                <div class="hero-background">
-                    <img src="assets/img/hero.webp" alt="Podología profesional en Osorno" class="hero-image">
+                <div class="hero-background" aria-hidden="true">
+                    <img src="assets/img/hero.webp" alt="Podóloga profesional Soley Pérez atendiendo pacientes en su consulta de Osorno, Los Lagos, Chile" class="hero-image">
                 </div>
-                <div class="hero-overlay"></div>
+                <div class="hero-overlay" aria-hidden="true"></div>
                 <div class="container position-relative z-index-1 hero-content">
                     <h1 class="display-4 fw-bold">Podología Profesional en Osorno</h1>
                     <p class="lead">Cuidando la salud de tus pies con profesionalismo y dedicación.</p>
-                    <div class="mt-4">
-                        <a href="#contacto" class="btn btn-medical btn-lg appointment-btn me-3 mb-2">Agenda tu cita</a>
-                        <a href="https://wa.me/56912345678" class="btn btn-success btn-lg mb-2"><i class="bi bi-whatsapp"></i> Contactar por WhatsApp</a>
+                    <div class="mt-4" role="group" aria-label="Acciones principales">
+                        <a href="#contacto" class="btn btn-medical btn-lg appointment-btn me-3 mb-2" aria-label="Agendar una cita con Soley Pérez">Agenda tu cita</a>
+                        <a href="https://wa.me/56912345678" class="btn btn-success btn-lg mb-2" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp al +56 9 1234 5678"><i class="bi bi-whatsapp" aria-hidden="true"></i> Contactar por WhatsApp</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <nav aria-label="breadcrumb" class="container">
+        <nav aria-label="breadcrumb" class="container mt-3">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Servicios</li>
             </ol>
         </nav>
 
-        <section id="servicios" class="container py-5">
+        <!-- 
+            SERVICES SECTION: Using semantic <section> with <article> for each service.
+            Each <article> represents a self-contained service offering, helping AI understand structure.
+        -->
+        <section id="servicios" class="container py-5" aria-labelledby="servicios-heading">
             <div class="container">
-                <h2 class="text-center mb-5">Mis Servicios</h2>
+                <!-- Question-based heading for AEO (Answer Engine Optimization) -->
+                <h2 id="servicios-heading" class="text-center mb-3">¿Qué servicios de podología ofrece Soley Pérez en Osorno?</h2>
+                
+                <!-- BLUF: Bottom Line Up Front - Direct answer for AI extraction -->
+                <p class="lead text-center mb-5 col-lg-10 mx-auto">
+                    Ofrezco atención podológica integral con más de 10 años de experiencia como técnico en enfermería. Mis servicios incluyen tratamiento de uñas encarnadas, hongos, pie diabético, ortomixia con brackets, y atención básica e infantil. Todos los tratamientos se realizan con técnicas modernas y profesionales en el centro de Osorno.
+                </p>
                 
                 <!-- Podología -->
                 <h3 class="mb-4 mt-5" style="color: var(--primary-blue);">Podología</h3>
                 <div class="row g-4 mb-5">
-                    <div class="col-lg-4 col-md-6">
+                    <!-- Using <article> instead of generic div for semantic meaning -->
+                    <article class="col-lg-4 col-md-6" itemscope itemtype="https://schema.org/Service">
                         <div class="card h-100 professional-shadow service-card">
                             <div class="card-body text-center">
-                                <div class="icon mb-3"><i class="bi bi-scissors"></i></div>
-                                <h5 class="card-title">Atención Podológica Básica e Infantil</h5>
-                                <p class="card-text">Onicotomía, pulido ungueal, pulido plantar y masaje podal.</p>
-                                <span class="badge bg-primary mb-2">$25.000</span>
+                                <div class="icon mb-3" aria-hidden="true"><i class="bi bi-scissors"></i></div>
+                                <h4 class="card-title h5" itemprop="name">Atención Podológica Básica e Infantil</h4>
+                                <p class="card-text" itemprop="description">Onicotomía, pulido ungueal, pulido plantar y masaje podal.</p>
+                                <span class="badge bg-primary mb-2" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                    <span itemprop="price" content="25000">$25.000</span>
+                                    <meta itemprop="priceCurrency" content="CLP">
+                                </span>
                                 <p class="small text-muted mb-3">Adultos mayores: 20% descuento</p>
-                                <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#serviceModal1">
+                                <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#serviceModal1" aria-label="Ver más detalles sobre Atención Podológica Básica">
                                     Más detalles
                                 </button>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
+                    </article>
+                    
+                    <article class="col-lg-4 col-md-6" itemscope itemtype="https://schema.org/Service">
                         <div class="card h-100 professional-shadow service-card">
                             <div class="card-body text-center">
-                                <div class="icon mb-3"><i class="bi bi-virus"></i></div>
-                                <h5 class="card-title">Uñas con Hongos</h5>
-                                <p class="card-text">Tratamiento especializado para onicomicosis con formación en micología del pie.</p>
-                                <span class="badge bg-primary mb-3">$30.000</span>
-                                <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#serviceModal2">
+                                <div class="icon mb-3" aria-hidden="true"><i class="bi bi-virus"></i></div>
+                                <h4 class="card-title h5" itemprop="name">Uñas con Hongos</h4>
+                                <p class="card-text" itemprop="description">Tratamiento especializado para onicomicosis con formación en micología del pie.</p>
+                                <span class="badge bg-primary mb-3" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                    <span itemprop="price" content="30000">$30.000</span>
+                                    <meta itemprop="priceCurrency" content="CLP">
+                                </span>
+                                <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#serviceModal2" aria-label="Ver más detalles sobre tratamiento de hongos">
                                     Más detalles
                                 </button>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
+                    </article>
+                    
+                    <article class="col-lg-4 col-md-6" itemscope itemtype="https://schema.org/Service">
                         <div class="card h-100 professional-shadow service-card">
                             <div class="card-body text-center">
-                                <div class="icon mb-3"><i class="bi bi-bandaid"></i></div>
-                                <h5 class="card-title">Atención Básica + Uña Encarnada</h5>
-                                <p class="card-text">Tratamiento completo incluyendo solución para uñas encarnadas.</p>
-                                <span class="badge bg-primary mb-2">$40.000</span>
+                                <div class="icon mb-3" aria-hidden="true"><i class="bi bi-bandaid"></i></div>
+                                <h4 class="card-title h5" itemprop="name">Atención Básica + Uña Encarnada</h4>
+                                <p class="card-text" itemprop="description">Tratamiento completo incluyendo solución para uñas encarnadas.</p>
+                                <span class="badge bg-primary mb-2" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                    <span itemprop="price" content="40000">$40.000</span>
+                                    <meta itemprop="priceCurrency" content="CLP">
+                                </span>
                                 <p class="small text-muted mb-3">Adultos mayores: 12,5% descuento</p>
-                                <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#serviceModal3">
+                                <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#serviceModal3" aria-label="Ver más detalles sobre tratamiento de uñas encarnadas">
                                     Más detalles
                                 </button>
                             </div>
                         </div>
-                    </div>
+                    </article>
                 </div>
 
                 <!-- Tratamientos Correctivos Unguiales -->
                 <h3 class="mb-4 mt-5" style="color: var(--primary-blue);">Tratamientos Correctivos Unguiales</h3>
                 <div class="row g-4 mb-5">
-                    <div class="col-lg-6 col-md-6">
+                    <article class="col-lg-6 col-md-6" itemscope itemtype="https://schema.org/Service">
                         <div class="card h-100 professional-shadow service-card">
                             <div class="card-body text-center">
-                                <div class="icon mb-3"><i class="bi bi-gear"></i></div>
-                                <h5 class="card-title">Ortomixia Brackets</h5>
-                                <p class="card-text">Sistema correctivo para uñas deformadas o encarnadas mediante brackets especializados.</p>
+                                <div class="icon mb-3" aria-hidden="true"><i class="bi bi-gear"></i></div>
+                                <h4 class="card-title h5" itemprop="name">Ortomixia Brackets</h4>
+                                <p class="card-text" itemprop="description">Sistema correctivo para uñas deformadas o encarnadas mediante brackets especializados.</p>
                                 <span class="badge bg-primary mb-2">$25.000 + $7.000/dedo</span>
                                 <p class="small text-muted mb-3">Incluye atención podológica</p>
-                                <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#serviceModal4">
+                                <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#serviceModal4" aria-label="Ver más detalles sobre Ortomixia Brackets">
                                     Más detalles
                                 </button>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
+                    </article>
+                    
+                    <article class="col-lg-6 col-md-6" itemscope itemtype="https://schema.org/Service">
                         <div class="card h-100 professional-shadow service-card">
                             <div class="card-body text-center">
-                                <div class="icon mb-3"><i class="bi bi-tools"></i></div>
-                                <h5 class="card-title">Encarrilamiento PTFE</h5>
-                                <p class="card-text">Técnica de corrección ungueal mediante encarrilamiento con material PTFE.</p>
+                                <div class="icon mb-3" aria-hidden="true"><i class="bi bi-tools"></i></div>
+                                <h4 class="card-title h5" itemprop="name">Encarrilamiento PTFE</h4>
+                                <p class="card-text" itemprop="description">Técnica de corrección ungueal mediante encarrilamiento con material PTFE.</p>
                                 <span class="badge bg-primary mb-2">$25.000 + $7.000/dedo</span>
                                 <p class="small text-muted mb-3">Incluye atención podológica</p>
-                                <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#serviceModal5">
+                                <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#serviceModal5" aria-label="Ver más detalles sobre Encarrilamiento PTFE">
                                     Más detalles
                                 </button>
                             </div>
                         </div>
-                    </div>
+                    </article>
                 </div>
 
                 <!-- Otros Servicios -->
                 <h3 class="mb-4 mt-5" style="color: var(--primary-blue);">Otros Servicios de Salud</h3>
                 <div class="row g-4">
-                    <div class="col-lg-4 col-md-6">
+                    <article class="col-lg-4 col-md-6" itemscope itemtype="https://schema.org/Service">
                         <div class="card h-100 professional-shadow service-card">
                             <div class="card-body text-center">
-                                <div class="icon mb-3"><i class="bi bi-heart-pulse-fill"></i></div>
-                                <h5 class="card-title">Inyecciones Intramusculares</h5>
-                                <p class="card-text">Administración profesional de medicamentos vía intramuscular.</p>
+                                <div class="icon mb-3" aria-hidden="true"><i class="bi bi-heart-pulse-fill"></i></div>
+                                <h4 class="card-title h5" itemprop="name">Inyecciones Intramusculares</h4>
+                                <p class="card-text" itemprop="description">Administración profesional de medicamentos vía intramuscular.</p>
                                 <span class="badge bg-primary mb-2">Desde $10.000</span>
                                 <p class="small text-muted mb-3">No incluye medicamento</p>
-                                <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#serviceModal6">
+                                <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#serviceModal6" aria-label="Ver más detalles sobre inyecciones intramusculares">
                                     Más detalles
                                 </button>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
+                    </article>
+                    
+                    <article class="col-lg-4 col-md-6" itemscope itemtype="https://schema.org/Service">
                         <div class="card h-100 professional-shadow service-card">
                             <div class="card-body text-center">
-                                <div class="icon mb-3"><i class="bi bi-file-medical"></i></div>
-                                <h5 class="card-title">Curación Plana</h5>
-                                <p class="card-text">Curación profesional de heridas y lesiones cutáneas.</p>
+                                <div class="icon mb-3" aria-hidden="true"><i class="bi bi-file-medical"></i></div>
+                                <h4 class="card-title h5" itemprop="name">Curación Plana</h4>
+                                <p class="card-text" itemprop="description">Curación profesional de heridas y lesiones cutáneas.</p>
                                 <span class="badge bg-primary mb-3">$12.000</span>
-                                <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#serviceModal7">
+                                <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#serviceModal7" aria-label="Ver más detalles sobre curación plana">
                                     Más detalles
                                 </button>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
+                    </article>
+                    
+                    <article class="col-lg-4 col-md-6" itemscope itemtype="https://schema.org/Service">
                         <div class="card h-100 professional-shadow service-card">
                             <div class="card-body text-center">
-                                <div class="icon mb-3"><i class="bi bi-droplet-fill"></i></div>
-                                <h5 class="card-title">Toma de Glicemia Capilar</h5>
-                                <p class="card-text">Control rápido y preciso de niveles de glucosa en sangre.</p>
+                                <div class="icon mb-3" aria-hidden="true"><i class="bi bi-droplet-fill"></i></div>
+                                <h4 class="card-title h5" itemprop="name">Toma de Glicemia Capilar</h4>
+                                <p class="card-text" itemprop="description">Control rápido y preciso de niveles de glucosa en sangre.</p>
                                 <span class="badge bg-primary mb-3">Consultar</span>
-                                <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#serviceModal8">
+                                <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#serviceModal8" aria-label="Ver más detalles sobre toma de glicemia">
                                     Más detalles
                                 </button>
                             </div>
                         </div>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <section id="sobre-mi" class="container py-5">
+        <!-- 
+            ABOUT SECTION: Using semantic <section> with <figure> for image.
+            Author biography is critical for E-E-A-T (Experience, Expertise, Authoritativeness, Trust).
+        -->
+        <section id="sobre-mi" class="container py-5" aria-labelledby="sobre-mi-heading">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-5 mb-4 mb-lg-0">
-                        <img src="assets/img/pelosa.png" class="img-fluid rounded-circle shadow" alt="Soley Pérez Hernández, Podóloga en Osorno" style="max-width: 350px;">
+                        <!-- Using <figure> for semantic meaning of author photo -->
+                        <figure class="text-center">
+                            <img src="assets/img/pelosa.png" class="img-fluid rounded-circle shadow" alt="Soley Pérez Hernández, Podóloga certificada y técnico en enfermería con más de 10 años de experiencia en Osorno, Chile" style="max-width: 350px;" itemprop="image">
+                        </figure>
                     </div>
                     <div class="col-lg-7">
-                        <h2>Sobre Soley Pérez Hernández</h2>
-<p class="lead">Soy Soley Pérez Hernández, podóloga certificada y profesional de la salud, técnico en enfermería con más de 10 años de experiencia, dedicada al cuidado integral y al bienestar de cada paciente. Mi consulta podológica se encuentra en el centro de Osorno, donde atiendo con cercanía y compromiso a personas de todas las edades.</p>
-<p>Mi objetivo es que cada paciente se sienta cómodo, seguro y bien atendido. Combino mi experiencia en enfermería con tratamientos podológicos modernos y efectivos, manteniéndome en constante capacitación profesional. Mi formación más reciente es en micología del pie, lo que me permite tratar de forma especializada los problemas de hongos en uñas y piel.</p>
-<p>Trato afecciones como uñas encarnadas, pie diabético, callos, durezas y otros problemas frecuentes de la salud del pie. Si estás buscando una podóloga en Osorno que te entregue una atención profesional y humana, estaré encantada de ayudarte a mejorar tu calidad de vida.</p>
+                        <!-- Question-based heading for AEO -->
+                        <h2 id="sobre-mi-heading">¿Quién es Soley Pérez Hernández?</h2>
+                        
+                        <!-- BLUF: Direct answer with E-E-A-T signals -->
+                        <p class="lead">
+                            Soy Soley Pérez Hernández, podóloga certificada y profesional de la salud, técnico en enfermería con más de 10 años de experiencia, dedicada al cuidado integral y al bienestar de cada paciente. Mi consulta podológica se encuentra en el centro de Osorno, donde atiendo con cercanía y compromiso a personas de todas las edades.
+                        </p>
+                        
+                        <p>Mi objetivo es que cada paciente se sienta cómodo, seguro y bien atendido. Combino mi experiencia en enfermería con tratamientos podológicos modernos y efectivos, manteniéndome en constante capacitación profesional. Mi formación más reciente es en micología del pie, lo que me permite tratar de forma especializada los problemas de hongos en uñas y piel.</p>
+                        
+                        <p>Trato afecciones como uñas encarnadas, pie diabético, callos, durezas y otros problemas frecuentes de la salud del pie. Si estás buscando una podóloga en Osorno que te entregue una atención profesional y humana, estaré encantada de ayudarte a mejorar tu calidad de vida.</p>
 
-                        <div class="mt-4">
-                            <a href="#contacto" class="btn btn-medical me-2">Contáctame</a>
-                            <a href="https://wa.me/56912345678" class="btn btn-success"><i class="bi bi-whatsapp"></i> WhatsApp</a>
+                        <div class="mt-4" role="group" aria-label="Opciones de contacto">
+                            <a href="#contacto" class="btn btn-medical me-2" aria-label="Ir al formulario de contacto">Contáctame</a>
+                            <a href="https://wa.me/56912345678" class="btn btn-success" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i> WhatsApp</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contacto" class="py-5">
+        <!-- 
+            CONTACT SECTION: Using semantic form with proper labeling for AI extraction.
+            Contact information is critical for local businesses in AI search results.
+        -->
+        <section id="contacto" class="py-5" aria-labelledby="contacto-heading">
             <div class="container">
                 <div class="text-center mb-5">
-                    <h2>Contacto</h2>
-                    <p class="lead">¿Tienes alguna pregunta o deseas agendar una cita? Completa el formulario y nos pondremos en contacto contigo.</p>
+                    <!-- Question-based heading for AEO -->
+                    <h2 id="contacto-heading">¿Cómo puedo agendar una cita con Soley Pérez en Osorno?</h2>
+                    
+                    <!-- BLUF: Direct answer with multiple contact options -->
+                    <p class="lead col-lg-8 mx-auto">
+                        Puedes agendar tu cita completando el formulario a continuación, llamando al +56 9 1234 5678, o contactándome directamente por WhatsApp. Atiendo en el centro de Osorno de lunes a viernes de 9:00 a 18:00 y sábados de 9:00 a 16:00.
+                    </p>
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
                         <div class="card professional-shadow border-0">
                             <div class="card-body p-4 p-md-5">
-                                <form id="contactForm" class="needs-validation" novalidate>
+                                <form id="contactForm" class="needs-validation" novalidate aria-label="Formulario de contacto">
                                     <div class="row">
                                         <div class="col-md-6 mb-4">
                                             <div class="form-floating">
-                                                <input type="text" class="form-control" id="name" placeholder="Nombre" required>
+                                                <input type="text" class="form-control" id="name" placeholder="Nombre" required aria-required="true">
                                                 <label for="name">Nombre</label>
-                                                <div class="invalid-feedback">Por favor, ingresa tu nombre.</div>
+                                                <div class="invalid-feedback" role="alert">Por favor, ingresa tu nombre.</div>
                                             </div>
                                         </div>
                                         <div class="col-md-6 mb-4">
                                             <div class="form-floating">
-                                                <input type="email" class="form-control" id="email" placeholder="Email" required>
+                                                <input type="email" class="form-control" id="email" placeholder="Email" required aria-required="true">
                                                 <label for="email">Email</label>
-                                                <div class="invalid-feedback">Por favor, ingresa un email válido.</div>
+                                                <div class="invalid-feedback" role="alert">Por favor, ingresa un email válido.</div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6 mb-4">
                                             <div class="form-floating">
-                                                <input type="tel" class="form-control" id="phone" placeholder="Teléfono" pattern="[0-9]{9}" required>
+                                                <input type="tel" class="form-control" id="phone" placeholder="Teléfono" pattern="[0-9]{9}" required aria-required="true" aria-describedby="phone-help">
                                                 <label for="phone">Teléfono</label>
-                                                <div class="form-text">Ej: 912345678</div>
-                                                <div class="invalid-feedback">Por favor, ingresa un teléfono válido (9 dígitos).</div>
+                                                <div class="form-text" id="phone-help">Ej: 912345678</div>
+                                                <div class="invalid-feedback" role="alert">Por favor, ingresa un teléfono válido (9 dígitos).</div>
                                             </div>
                                         </div>
                                         <div class="col-md-6 mb-4">
                                             <div class="form-floating">
-                                                <select class="form-select" id="service" required>
+                                                <select class="form-select" id="service" required aria-required="true">
                                                     <option selected disabled value="">Selecciona un servicio</option>
                                                     <option>Tratamiento de uñas encarnadas</option>
                                                     <option>Callos y durezas</option>
@@ -386,32 +585,32 @@
                                                     <option>Otros</option>
                                                 </select>
                                                 <label for="service">Servicio de interés</label>
-                                                <div class="invalid-feedback">Por favor, selecciona un servicio.</div>
+                                                <div class="invalid-feedback" role="alert">Por favor, selecciona un servicio.</div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="mb-4">
                                         <div class="form-floating">
-                                            <textarea class="form-control" id="message" placeholder="Mensaje" style="height: 150px" required></textarea>
+                                            <textarea class="form-control" id="message" placeholder="Mensaje" style="height: 150px" required aria-required="true"></textarea>
                                             <label for="message">Mensaje</label>
-                                            <div class="invalid-feedback">Por favor, ingresa tu mensaje.</div>
+                                            <div class="invalid-feedback" role="alert">Por favor, ingresa tu mensaje.</div>
                                         </div>
                                     </div>
                                     <div class="form-check mb-4">
-                                        <input class="form-check-input" type="checkbox" value="" id="terms" required>
+                                        <input class="form-check-input" type="checkbox" value="" id="terms" required aria-required="true">
                                         <label class="form-check-label" for="terms">
                                             Acepto los <a href="terminos.html" target="_blank" rel="noopener noreferrer">términos y condiciones</a>.
                                         </label>
-                                        <div class="invalid-feedback">Debes aceptar los términos y condiciones.</div>
+                                        <div class="invalid-feedback" role="alert">Debes aceptar los términos y condiciones.</div>
                                     </div>
                                     <div class="d-grid">
-                                        <button class="btn btn-primary btn-lg py-3" type="submit" id="submitButton">
+                                        <button class="btn btn-primary btn-lg py-3" type="submit" id="submitButton" aria-label="Enviar formulario de contacto">
                                             <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
-                                            <i class="bi bi-send me-2"></i>Enviar Mensaje
+                                            <i class="bi bi-send me-2" aria-hidden="true"></i>Enviar Mensaje
                                         </button>
                                     </div>
                                 </form>
-                                <div id="form-alerts" class="mt-3"></div>
+                                <div id="form-alerts" class="mt-3" role="alert" aria-live="polite"></div>
                             </div>
                         </div>
                     </div>

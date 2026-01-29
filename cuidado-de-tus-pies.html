@@ -60,7 +60,9 @@
       "image": "https://www.soley-podologia.cl/assets/img/hero-cuidado-pies.jpg",  
       "author": {
         "@type": "Person",
-        "name": "Soley Pérez Hernández"
+        "name": "Soley Pérez Hernández",
+        "jobTitle": "Podóloga Certificada y Técnico en Enfermería",
+        "hasCredential": "Técnico en Enfermería con más de 10 años de experiencia"
       },  
       "publisher": {
         "@type": "Organization",
@@ -70,7 +72,85 @@
           "url": "https://www.soley-podologia.cl/assets/img/logo_soley_sf.gif"
         }
       },
-      "datePublished": "2025-07-15"
+      "datePublished": "2025-07-15",
+      "dateModified": "2026-01-28"
+    }
+    </script>
+
+    <!-- FAQPage Schema: CRÍTICO para AI Overviews - Cada tip como Q&A -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cómo debo lavar y secar mis pies correctamente?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lava tus pies diariamente con agua tibia y jabón de pH neutro. Evita el agua muy caliente que puede resecar la piel. Presta especial atención a los espacios entre los dedos. Después de lavar, seca tus pies completamente, sobre todo entre los dedos, ya que la humedad es el caldo de cultivo perfecto para los hongos. Usa calcetines de fibras naturales como algodón o lana y cámbialos a diario."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuál es la forma correcta de cortar las uñas de los pies?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El mejor momento es después del baño, cuando las uñas están más blandas. Utiliza un cortaúñas recto y de buena calidad. Realiza el corte de forma recta, evitando redondear las esquinas. Las esquinas deben quedar visibles fuera de la piel. Nunca las cortes demasiado cortas ni con forma curva. Usa una lima de cartón o cristal para suavizar los bordes. No cortes ni empujes las cutículas, ya que son una barrera natural contra las bacterias."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo puedo prevenir los callos y durezas en los pies?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La clave es una buena hidratación y el uso de calzado que no oprima el pie. Realiza exfoliación semanal con piedra pómez durante la ducha. Usa cremas con urea diariamente, un componente que ayuda a disolver la piel engrosada. Nunca intentes cortar los callos en casa, ya que podrías provocarte una herida o infección grave. Utiliza protectores o almohadillas de silicona en las zonas de mayor presión si es necesario."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué características debe tener un buen calzado para la salud de los pies?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Compra zapatos por la tarde cuando los pies están más dilatados. Debe haber un espacio de aproximadamente un centímetro entre tu dedo más largo y la punta del zapato. El material debe ser flexible y transpirable (cuero o telas naturales). La suela debe ofrecer buena amortiguación, ser antideslizante y doblarse con facilidad a la altura de los dedos. El zapato debe sujetar bien el pie sin oprimirlo. La puntera debe ser ancha para que los dedos puedan moverse libremente."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- BreadcrumbList Schema para navegación -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://www.soley-podologia.cl/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Cuidado de tus Pies",
+          "item": "https://www.soley-podologia.cl/cuidado-de-tus-pies.html"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Speakable Schema para asistentes de voz -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "4 Tips Esenciales para el Cuidado de tus Pies",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["#hero-tips h1", ".lead", "article h2"]
+      }
     }
     </script>
     <!-- Google Analytics 4 -->
@@ -90,9 +170,12 @@
         <!-- El navbar se carga dinámicamente con JavaScript -->
     </header>
 
-    <main id="main-content">
-        <!-- Hero Section -->
-        <section id="hero-tips" class="hero-section-tips text-white text-center d-flex align-items-center justify-content-center">
+    <!-- 
+        MAIN CONTENT: Using <main> semantic tag helps AI identify the primary content area.
+    -->
+    <main id="main-content" role="main" aria-label="Contenido principal">
+        <!-- Hero Section para artículo -->
+        <section id="hero-tips" class="hero-section-tips text-white text-center d-flex align-items-center justify-content-center" aria-label="Introducción del artículo">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-10">
@@ -111,79 +194,102 @@
             </ol>
         </nav>
 
-        <!-- Full Tips Content Section -->
-        <section id="tips-content" class="py-5">
+        <!-- 
+            TIPS CONTENT SECTION: Each <article> represents an independent, self-contained tip.
+            This semantic structure helps AI extract individual tips as separate content units.
+        -->
+        <section id="tips-content" class="py-5" aria-labelledby="tips-heading">
             <div class="container">
                 <div class="row g-5">
                     <div class="col-lg-8">
-                        <!-- Tip 1 -->
-                        <article class="mb-5 reveal-on-scroll">
-                            <h2 class="h3">1. Rutina Diaria de Higiene para Pies Saludables</h2>
-                            <img src="assets/img/cuidado-pies-secado-de-pies.webp" class="img-fluid rounded mb-4" alt="Persona secando cuidadosamente sus pies con una toalla limpia.">
-                            <p class="lead">Una correcta higiene es el pilar fundamental para prevenir infecciones, mal olor y otros problemas comunes. Dedicarle unos minutos al día a tus pies es una inversión en tu salud general.</p>
-                            <p>Lava tus pies diariamente con agua tibia y un jabón de pH neutro. Evita el agua muy caliente, ya que puede resecar la piel. Presta especial atención a los espacios entre los dedos, una zona propensa a la acumulación de humedad y hongos.</p>
+                        <!-- Tip 1: Using <article> to indicate self-contained content -->
+                        <article class="mb-5 reveal-on-scroll" itemscope itemtype="https://schema.org/HowTo">
+                            <h2 class="h3" itemprop="name">1. Rutina Diaria de Higiene para Pies Saludables</h2>
+                            <figure>
+                                <img src="assets/img/cuidado-pies-secado-de-pies.webp" 
+                                     class="img-fluid rounded mb-4" 
+                                     alt="Persona secando cuidadosamente sus pies con una toalla limpia después del baño, prestando especial atención a los espacios entre los dedos para prevenir hongos" 
+                                     itemprop="image">
+                            </figure>
+                            <p class="lead" itemprop="description">Una correcta higiene es el pilar fundamental para prevenir infecciones, mal olor y otros problemas comunes. Dedicarle unos minutos al día a tus pies es una inversión en tu salud general.</p>
+                            <p itemprop="text">Lava tus pies diariamente con agua tibia y un jabón de pH neutro. Evita el agua muy caliente, ya que puede resecar la piel. Presta especial atención a los espacios entre los dedos, una zona propensa a la acumulación de humedad y hongos.</p>
                             <h3 class="h5 mt-4">Pasos para una higiene correcta:</h3>
-                            <ul class="mt-3">
+                            <ul class="mt-3" itemprop="step" itemscope itemtype="https://schema.org/HowToSection">
                                 <li><strong>Secado minucioso:</strong> Después de lavar, seca tus pies completamente, sobre todo entre los dedos. La humedad es el caldo de cultivo perfecto para los hongos.</li>
                                 <li><strong>Hidratación:</strong> Aplica una crema hidratante específica para pies por la noche. Evita aplicarla entre los dedos para no generar un exceso de humedad.</li>
                                 <li><strong>Calcetines limpios:</strong> Usa calcetines de fibras naturales como el algodón o la lana y cámbialos a diario.</li>
                             </ul>
-                            <a href="#productos-recomendados" class="btn btn-outline-primary btn-sm mt-3">Ver productos para higiene</a>
+                            <a href="#productos-recomendados" class="btn btn-outline-primary btn-sm mt-3" aria-label="Ver productos recomendados para higiene de pies">Ver productos para higiene</a>
                         </article>
 
                         <!-- Tip 2 -->
-                        <article class="mb-5 reveal-on-scroll">
-                            <h2 class="h3">2. Cómo Cortar y Cuidar las Uñas de los Pies Correctamente</h2>
-                            <img src="assets/img/herramientas-unas.webp" class="img-fluid rounded mb-4" alt="Herramientas para el cuidado de las uñas de los pies sobre una superficie limpia.">
-                            <p class="lead">Un corte de uñas inadecuado es la causa principal de las dolorosas uñas encarnadas. Aprender la técnica correcta es esencial para evitar visitas de emergencia al podólogo.</p>
-                            <p>El mejor momento para cortar las uñas es después del baño, cuando están más blandas. Utiliza un cortaúñas recto y de buena calidad. Realiza el corte de forma recta, evitando redondear las esquinas. Las esquinas deben quedar visibles fuera de la piel. Si tienes dificultades por el grosor o la curvatura de tus uñas, es mejor que acudas a un profesional.</p>
+                        <article class="mb-5 reveal-on-scroll" itemscope itemtype="https://schema.org/HowTo">
+                            <h2 class="h3" itemprop="name">2. Cómo Cortar y Cuidar las Uñas de los Pies Correctamente</h2>
+                            <figure>
+                                <img src="assets/img/herramientas-unas.webp" 
+                                     class="img-fluid rounded mb-4" 
+                                     alt="Herramientas profesionales para el cuidado de las uñas de los pies: cortaúñas recto de acero inoxidable y lima de cristal sobre una superficie limpia" 
+                                     itemprop="image">
+                            </figure>
+                            <p class="lead" itemprop="description">Un corte de uñas inadecuado es la causa principal de las dolorosas uñas encarnadas. Aprender la técnica correcta es esencial para evitar visitas de emergencia al podólogo.</p>
+                            <p itemprop="text">El mejor momento para cortar las uñas es después del baño, cuando están más blandas. Utiliza un cortaúñas recto y de buena calidad. Realiza el corte de forma recta, evitando redondear las esquinas. Las esquinas deben quedar visibles fuera de la piel. Si tienes dificultades por el grosor o la curvatura de tus uñas, es mejor que acudas a un profesional.</p>
                             <h3 class="h5 mt-4">Técnica de corte y limado:</h3>
-                            <ul class="mt-3">
+                            <ul class="mt-3" itemprop="step" itemscope itemtype="https://schema.org/HowToSection">
                                 <li><strong>Corte recto:</strong> Nunca las cortes demasiado cortas ni con forma curva.</li>
                                 <li><strong>Limado suave:</strong> Usa una lima de cartón o cristal para suavizar los bordes y esquinas después del corte.</li>
                                 <li><strong>No toques las cutículas:</strong> Las cutículas son una barrera natural contra las bacterias. No las cortes ni las empujes hacia atrás.</li>
                             </ul>
-                            <a href="#productos-recomendados" class="btn btn-outline-primary btn-sm mt-3">Ver herramientas recomendadas</a>
+                            <a href="#productos-recomendados" class="btn btn-outline-primary btn-sm mt-3" aria-label="Ver herramientas recomendadas para corte de uñas">Ver herramientas recomendadas</a>
                         </article>
 
                         <!-- Tip 3 -->
-                        <article class="mb-5 reveal-on-scroll">
-                            <h2 class="h3">3. Prevención y Tratamiento de Callos y Durezas</h2>
-                            <img src="assets/img/pelosa.png" class="img-fluid rounded mb-4" alt="Imágen representativa de durezas y callos">
-                            <p class="lead">Las durezas y callos son una respuesta de la piel a la presión o fricción excesiva. Aunque comunes, pueden causar molestias y dolor si no se tratan adecuadamente.</p>
-                            <p>La clave para prevenir su aparición es una buena hidratación y el uso de calzado que no oprima el pie. La exfoliación regular con una piedra pómez o una lima podal puede ayudar a mantener a raya las durezas leves. Sin embargo, nunca intentes cortar los callos en casa, ya que podrías provocarte una herida o una infección grave.</p>
+                        <article class="mb-5 reveal-on-scroll" itemscope itemtype="https://schema.org/HowTo">
+                            <h2 class="h3" itemprop="name">3. Prevención y Tratamiento de Callos y Durezas</h2>
+                            <figure>
+                                <img src="assets/img/pelosa.png" 
+                                     class="img-fluid rounded mb-4" 
+                                     alt="Representación visual de durezas y callos en los pies, mostrando las zonas más comunes de aparición" 
+                                     itemprop="image">
+                            </figure>
+                            <p class="lead" itemprop="description">Las durezas y callos son una respuesta de la piel a la presión o fricción excesiva. Aunque comunes, pueden causar molestias y dolor si no se tratan adecuadamente.</p>
+                            <p itemprop="text">La clave para prevenir su aparición es una buena hidratación y el uso de calzado que no oprima el pie. La exfoliación regular con una piedra pómez o una lima podal puede ayudar a mantener a raya las durezas leves. Sin embargo, nunca intentes cortar los callos en casa, ya que podrías provocarte una herida o una infección grave.</p>
                             <h3 class="h5 mt-4">Cuidados preventivos:</h3>
-                            <ul class="mt-3">
+                            <ul class="mt-3" itemprop="step" itemscope itemtype="https://schema.org/HowToSection">
                                 <li><strong>Exfoliación semanal:</strong> Durante la ducha, pasa suavemente una piedra pómez por las zonas de mayor roce.</li>
                                 <li><strong>Hidratación diaria:</strong> Usa cremas con urea, un componente que ayuda a disolver la piel engrosada.</li>
                                 <li><strong>Protección:</strong> Utiliza protectores o almohadillas de silicona en las zonas de mayor presión si es necesario.</li>
                             </ul>
-                            <a href="#productos-recomendados" class="btn btn-outline-primary btn-sm mt-3">Ver productos para durezas</a>
+                            <a href="#productos-recomendados" class="btn btn-outline-primary btn-sm mt-3" aria-label="Ver productos recomendados para durezas">Ver productos para durezas</a>
                         </article>
 
                         <!-- Tip 4 -->
-                        <article class="reveal-on-scroll">
-                            <h2 class="h3">4. Guía Completa para Elegir el Calzado Perfecto</h2>
-                            <img src="assets/img/probandose-zapatillas.webp" class="img-fluid rounded mb-4" alt="Persona probándose un zapato deportivo en una tienda.">
-                            <p class="lead">El 80% de los problemas podológicos están relacionados con el uso de un calzado inadecuado. Elegir bien tus zapatos es fundamental para la salud de tus pies, rodillas y espalda.</p>
-                            <p>Compra zapatos por la tarde, cuando los pies están más dilatados. Asegúrate de que haya un espacio de aproximadamente un centímetro entre tu dedo más largo y la punta del zapato. El material debe ser flexible y transpirable, y la suela debe ofrecer una buena amortiguación y agarre.</p>
+                        <article class="reveal-on-scroll" itemscope itemtype="https://schema.org/HowTo">
+                            <h2 class="h3" itemprop="name">4. Guía Completa para Elegir el Calzado Perfecto</h2>
+                            <figure>
+                                <img src="assets/img/probandose-zapatillas.webp" 
+                                     class="img-fluid rounded mb-4" 
+                                     alt="Persona probándose un zapato deportivo en una tienda, verificando el ajuste correcto y el espacio adecuado para los dedos" 
+                                     itemprop="image">
+                            </figure>
+                            <p class="lead" itemprop="description">El 80% de los problemas podológicos están relacionados con el uso de un calzado inadecuado. Elegir bien tus zapatos es fundamental para la salud de tus pies, rodillas y espalda.</p>
+                            <p itemprop="text">Compra zapatos por la tarde, cuando los pies están más dilatados. Asegúrate de que haya un espacio de aproximadamente un centímetro entre tu dedo más largo y la punta del zapato. El material debe ser flexible y transpirable, y la suela debe ofrecer una buena amortiguación y agarre.</p>
                             <h3 class="h5 mt-4">Claves para una buena elección:</h3>
-                            <ul class="mt-3">
+                            <ul class="mt-3" itemprop="step" itemscope itemtype="https://schema.org/HowToSection">
                                 <li><strong>Materiales naturales:</strong> Elige cuero o telas transpirables que se adapten a la forma de tu pie.</li>
                                 <li><strong>Suela flexible y antideslizante:</strong> La suela debe doblarse con facilidad a la altura de los dedos.</li>
                                 <li><strong>Sujeción adecuada:</strong> El zapato debe sujetar bien el pie, sin oprimirlo. Los cordones o velcros son una buena opción.</li>
                                 <li><strong>Puntera ancha:</strong> Los dedos deben poder moverse libremente dentro del zapato.</li>
                             </ul>
-                            <a href="#productos-recomendados" class="btn btn-outline-primary btn-sm mt-3">Ver calzado recomendado</a>
+                            <a href="#productos-recomendados" class="btn btn-outline-primary btn-sm mt-3" aria-label="Ver calzado recomendado">Ver calzado recomendado</a>
                         </article>
                     </div>
 
-                    <!-- Sidebar with Recommended Products -->
-                    <div class="col-lg-4">
-                        <aside id="productos-recomendados" class="sticky-top" style="top: 100px;">
+                    <!-- Sidebar with Recommended Products: Using <aside> for complementary content -->
+                    <aside class="col-lg-4" aria-label="Productos recomendados">
+                        <div id="productos-recomendados" class="sticky-top" style="top: 100px;">
                             <div class="bg-white p-4 rounded shadow-sm">
                                 <h3 class="h4 mb-4 text-center">Productos Recomendados</h3>
-                                <p class="text-center small mb-4 text-muted">Como afiliado, gano con las compras que califican. Esto no tiene costo extra para ti.</p>
+                                <p class="text-center small mb-4 text-muted" role="note">Como afiliado, gano con las compras que califican. Esto no tiene costo extra para ti.</p>
                                 
                                 <!-- Product 1 -->
                                 <div class="card product-card mb-3 border-0">
