@@ -220,3 +220,12 @@
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
 }
+
+/* Collapsible Toggle Styling */
+.more-info-toggle[aria-expanded="false"] .text-expanded {
+    display: none !important;
+}
+
+.more-info-toggle[aria-expanded="true"] .text-collapsed {
+    display: none !important;
+}
