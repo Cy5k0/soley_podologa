@@ -2,93 +2,173 @@
 
 /* Hero Section for Tips Page */
 .hero-section-tips {
-    background: linear-gradient(rgba(44, 90, 160, 0.7), rgba(40, 167, 69, 0.5)), url('https://images.unsplash.com/photo-1605548154442-57b57b1d06a5?q=80&w=2070&auto=format&fit=crop') no-repeat center center;
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-teal) 100%), url('https://images.unsplash.com/photo-1605548154442-57b57b1d06a5?q=80&w=2070&auto=format&fit=crop') no-repeat center center;
     background-size: cover;
     min-height: 60vh;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Tip Cards Styling */
-.tip-card {
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden;
+.hero-section-tips .container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
+    padding: 2rem;
 }
 
-.tip-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+.hero-section-tips h1 {
+    color: #fff;
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
-.tip-card .card-img-top {
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    transition: transform 0.3s ease;
+.hero-section-tips .lead {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2rem;
 }
 
-.tip-card:hover .card-img-top {
-    transform: scale(1.05);
+/* Tip Articles Styling */
+#tips-content article {
+    margin-bottom: 4rem;
+    padding: 2rem 0;
 }
 
-.tip-card .card-body {
-    padding: 1.5rem;
+#tips-content article h2 {
+    color: var(--primary-blue);
+    margin-bottom: 1.5rem;
+    position: relative;
 }
 
-.tip-card .card-title {
-    color: var(--medical-blue);
-    font-weight: 700;
+#tips-content article h2:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(to right, var(--primary-blue), var(--primary-green));
+    border-radius: 2px;
 }
 
-/* Product Section Styling */
-#productos-recomendados {
-    border-radius: 15px;
+#tips-content article .lead {
+    color: var(--text-dark);
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
 }
 
-.product-card {
-    border: 1px solid #e0e0e0;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: box-shadow 0.3s ease;
+#tips-content article ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
-.product-card:hover {
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+#tips-content article ul li {
+    margin-bottom: 0.75rem;
+    padding-left: 0.5rem;
+    position: relative;
 }
 
-.product-card .img-fluid {
-    object-fit: cover;
-    height: 100%;
+#tips-content article ul li strong {
+    color: var(--primary-blue);
 }
 
-.affiliate-btn {
-    background-color: var(--medical-green);
-    border-color: var(--medical-green);
-    font-weight: 500;
-}
-
-.affiliate-btn:hover {
-    background-color: #218838;
-    border-color: #1e7e34;
-}
-
-/* CTA Section */
-#cta-agendar {
-    background-color: var(--soft-gray);
-    border-radius: 15px;
-    padding: 4rem 2rem;
-}
-
-/* Article Image Styling */
 #tips-content article img {
     max-width: 600px;
     width: 100%;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    margin: 1.5rem auto;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-medium);
+}
+
+/* Product Section Styling */
+#productos-recomendados {
+    border-radius: var(--border-radius-lg);
+    background: #fff;
+    box-shadow: var(--shadow-medium);
+    border: none;
+}
+
+#productos-recomendados h3 {
+    color: var(--primary-blue);
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--light-blue);
+}
+
+#productos-recomendados .small {
+    color: var(--text-light);
+}
+
+.product-card {
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: var(--transition);
+    margin-bottom: 1rem;
+    background: #fff;
+}
+
+.product-card:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-5px);
+}
+
+.product-card .card-body {
+    padding: 1rem;
+}
+
+.product-card .card-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.product-card .card-text {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 0.75rem;
+}
+
+.affiliate-btn {
+    background-color: var(--primary-green);
+    border-color: var(--primary-green);
+    font-weight: 600;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    width: 100%;
+}
+
+.affiliate-btn:hover {
+    background-color: #6d775e; /* Darker Olive */
+    border-color: #5d6650;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-light);
+}
+
+/* CTA Section */
+#cta-agendar {
+    background: linear-gradient(135deg, var(--light-blue) 0%, #ffffff 100%);
+    border-radius: var(--border-radius-lg);
+    padding: 4rem 2rem;
+    margin: 4rem 0;
+    box-shadow: inset 0 0 0 1px rgba(26, 58, 108, 0.1);
+}
+
+#cta-agendar h2 {
+    color: var(--primary-blue);
+    margin-bottom: 1.5rem;
+}
+
+#cta-agendar .lead {
+    color: var(--text-light);
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
 }
 
 /* Scroll Animations (requires JS intersection observer) */
@@ -108,8 +188,14 @@
     .hero-section-tips {
         min-height: 50vh;
     }
-    .tip-card {
-        margin-bottom: 1.5rem;
+    .hero-section-tips h1 {
+        font-size: 2.2rem;
+    }
+    .sticky-top {
+        position: static;
+    }
+    #productos-recomendados {
+        margin-top: 2rem;
     }
 }
 
@@ -117,7 +203,29 @@
     .hero-section-tips {
         min-height: 40vh;
     }
-    .product-card .img-fluid {
-        border-radius: 10px 10px 0 0;
+    .hero-section-tips h1 {
+        font-size: 1.8rem;
     }
+    #tips-content article img {
+        max-width: 100%;
+    }
+    #cta-agendar {
+        padding: 2rem 1rem;
+    }
+}
+
+/* Button Override */
+.btn-outline-primary {
+    border-radius: var(--border-radius);
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+/* Collapsible Toggle Styling */
+.more-info-toggle[aria-expanded="false"] .text-expanded {
+    display: none !important;
+}
+
+.more-info-toggle[aria-expanded="true"] .text-collapsed {
+    display: none !important;
 }
