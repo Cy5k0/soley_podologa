@@ -182,8 +182,8 @@ p {
 .navbar {
     transition: var(--transition);
     box-shadow: 0 2px 10px rgba(65, 67, 61, 0.08); /* Updated shadow color */
-    background-color: rgba(251, 250, 234, 0.95) !important; /* Cream background */
-    backdrop-filter: blur(10px);
+    background-color: rgba(251, 250, 234, 0.98) !important; /* Cream background */
+    /* backdrop-filter removed to prevent containing block issues with offcanvas */
     z-index: 1050;
 }
 
