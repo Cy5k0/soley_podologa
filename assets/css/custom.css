@@ -241,13 +241,16 @@ p {
 /* Navbar Logo Styles */
 .navbar-logo {
     height: 80px;
-    width: 240px;
+    width: auto; /* Allow image intrinsic width to prevent spacing anomalies with circular logos */
+    max-width: 100%;
     object-fit: contain;
     transition: var(--transition);
 }
 
 .navbar-brand-text {
+    /* Set fluid spacing/sizing. Keep tangerine styling if class is applied. */
     font-size: 1.8em;
+    white-space: normal;
 }
 
 /* Responsive navbar logo */
@@ -256,19 +259,24 @@ p {
         padding: 0.5rem 1rem;
     }
     
+    .navbar-brand {
+        max-width: calc(100% - 70px); /* Leave space for the toggler */
+    }
+
     .navbar-logo {
-        height: 60px;
-        width: 175px;
-        object-fit: contain;
+        height: 55px;
+        width: auto;
     }
     
     .font-tangerine {
-        font-size: 2.5rem; /* Smaller font on tablet/mobile */
-        margin-left: 0.5rem;
+        font-size: 2rem; /* Smaller font on tablet/mobile to prevent wrapping */
+        margin-left: 0.3rem;
     }
     
     .navbar-brand-text {
-        font-size: 1.4em;
+        font-size: 1.2em; /* fallback */
+        white-space: normal;
+        line-height: 1.1;
     }
     
     .navbar-nav .nav-link {
@@ -278,13 +286,15 @@ p {
 
 @media (max-width: 576px) {
     .navbar-logo {
-        height: 50px;
-        width: 145px;
-        object-fit: contain;
+        height: 45px;
     }
     
+    .font-tangerine {
+        font-size: 1.6rem; /* Even smaller font on phones to ensure fit */
+    }
+
     .navbar-brand-text {
-        font-size: 1.2em;
+        font-size: 1em; /* fallback */
     }
     
     .navbar-nav .nav-link {

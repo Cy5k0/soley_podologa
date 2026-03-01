@@ -14,6 +14,17 @@ document.addEventListener("DOMContentLoaded", function() {
                 } else {
                     link.classList.remove('active');
                 }
+                
+                // Hide offcanvas menu on click (for mobile experience)
+                link.addEventListener('click', () => {
+                    const offcanvasEl = document.getElementById('offcanvasNavbar');
+                    if (offcanvasEl) {
+                        const bsOffcanvas = bootstrap.Offcanvas.getInstance(offcanvasEl);
+                        if (bsOffcanvas) {
+                            bsOffcanvas.hide();
+                        }
+                    }
+                });
             });
         });
 
