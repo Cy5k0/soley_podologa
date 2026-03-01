@@ -621,6 +621,7 @@ p {
     box-shadow: var(--shadow-medium);
     background: var(--primary-blue);
     border: none;
+    bottom: 5.5rem !important; /* Move above WhatsApp button */
 }
 
 #backToTop:hover {
