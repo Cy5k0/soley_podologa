@@ -87,34 +87,91 @@
 /* Product Section Styling */
 #productos-recomendados {
     border-radius: var(--border-radius-lg);
-    background: #fff;
-    box-shadow: var(--shadow-medium);
-    border: none;
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(26, 58, 108, 0.05);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 #productos-recomendados h3 {
     color: var(--primary-blue);
-    margin-bottom: 1.5rem;
-    padding-bottom: 1rem;
-    border-bottom: 2px solid var(--light-blue);
+    margin: 0;
+    padding: 1.5rem;
+    background: linear-gradient(to right, #f8faff, #ffffff);
+    border-bottom: 1px solid var(--light-blue);
+    font-weight: 700;
 }
 
-#productos-recomendados .small {
-    color: var(--text-light);
+.recommendation-note {
+    padding: 0.75rem 1.5rem;
+    background: #fff9f0;
+    border-bottom: 1px solid #ffeeba;
+    font-size: 0.75rem;
+    color: #856404;
+    margin: 0;
+}
+
+.products-scroll-container {
+    max-height: 600px;
+    overflow-y: auto;
+    padding: 1.5rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-blue) #f1f1f1;
+}
+
+/* Custom Scrollbar for Chrome/Safari/Edge */
+.products-scroll-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.products-scroll-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.products-scroll-container::-webkit-scrollbar-thumb {
+    background: var(--primary-blue);
+    border-radius: 10px;
+}
+
+.products-scroll-container::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-teal);
 }
 
 .product-card {
-    border: 1px solid var(--border-color);
+    border: 1px solid rgba(0, 0, 0, 0.05);
     border-radius: var(--border-radius);
     overflow: hidden;
-    transition: var(--transition);
-    margin-bottom: 1rem;
-    background: #fff;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    margin-bottom: 1.25rem;
+    background: #ffffff;
+    position: relative;
+}
+
+.product-card:last-child {
+    margin-bottom: 0;
 }
 
 .product-card:hover {
-    box-shadow: var(--shadow-hover);
-    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transform: translateY(-3px);
+    border-color: var(--primary-blue);
+}
+
+.product-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--primary-green);
+    color: white;
+    font-size: 0.65rem;
+    padding: 2px 8px;
+    border-radius: 20px;
+    font-weight: 600;
+    z-index: 1;
+    text-transform: uppercase;
 }
 
 .product-card .card-body {
@@ -122,33 +179,45 @@
 }
 
 .product-card .card-title {
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-    color: var(--text-dark);
+    font-size: 1rem;
+    line-height: 1.3;
+    margin-bottom: 0.75rem;
+    color: var(--primary-blue);
+    font-weight: 600;
 }
 
 .product-card .card-text {
-    font-size: 0.9rem;
-    color: var(--text-light);
-    margin-bottom: 0.75rem;
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 1rem;
 }
 
 .affiliate-btn {
-    background-color: var(--primary-green);
-    border-color: var(--primary-green);
+    background: linear-gradient(135deg, var(--primary-green) 0%, #7a8a66 100%);
+    border: none;
+    color: white;
     font-weight: 600;
-    padding: 0.4rem 0.8rem;
+    padding: 0.6rem 1rem;
     font-size: 0.9rem;
-    border-radius: var(--border-radius);
-    transition: var(--transition);
+    border-radius: 8px;
+    transition: all 0.3s ease;
     width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
 }
 
 .affiliate-btn:hover {
-    background-color: #6d775e; /* Darker Olive */
-    border-color: #5d6650;
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-light);
+    background: linear-gradient(135deg, #6d775e 0%, #5d6650 100%);
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(122, 138, 102, 0.3);
+}
+
+.affiliate-btn:after {
+    content: '\F138'; /* Bootstrap icon chevron-right */
+    font-family: "bootstrap-icons";
+    font-size: 0.8rem;
 }
 
 /* CTA Section */
