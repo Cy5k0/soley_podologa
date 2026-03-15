@@ -132,7 +132,7 @@ Ejemplo:
 
 <p class="lead">
     Puedes agendar tu cita completando el formulario a continuación, 
-    llamando al +56 9 1234 5678, o contactándome directamente por WhatsApp. 
+    llamando al +56 9 5038 4988, o contactándome directamente por WhatsApp. 
     Atiendo en el centro de Osorno de lunes a viernes de 9:00 a 18:00 
     y sábados de 9:00 a 16:00.
 </p>
