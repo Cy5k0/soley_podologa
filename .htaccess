@@ -1,4 +1,19 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Force WWW and HTTPS
+  RewriteCond %{HTTP_HOST} !^www\. [NC,OR]
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://www.podologasoley.com/$1 [L,R=301]
+
+  # Redirect old domains if possible (if they point to this same server)
+  RewriteCond %{HTTP_HOST} podologialoslagos\.com [NC,OR]
+  RewriteCond %{HTTP_HOST} soley-podologia\.cl [NC]
+  RewriteRule ^(.*)$ https://www.podologasoley.com/$1 [L,R=301]
+</IfModule>
+
 <IfModule mod_expires.c>
+
   ExpiresActive On
 
   # Default directive
