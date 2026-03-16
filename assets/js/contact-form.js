@@ -121,14 +121,24 @@ document.addEventListener('DOMContentLoaded', function() {
             // Enviar los datos al servicio de backend (AWS SNS)
             await sendMessageToSNS(name, email, phone, service, message);
             showMessage("Tu mensaje ha sido enviado con éxito. ¡Gracias!", "success");
+            
+            // Limpiar formulario y estados de validación
             form.reset();
             form.classList.remove('was-validated');
+            
         } catch (error) {
+            console.error("Error en el proceso de envío:", error);
             showMessage("Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo más tarde.", "error");
         } finally {
-            // Rehabilitar el botón y ocultar el spinner
-            submitButton.disabled = false;
-            submitButton.innerHTML = originalText;
+            // Rehabilitar el botón y restaurar el texto original con un pequeño retraso para mejor UX
+            setTimeout(() => {
+                submitButton.disabled = false;
+                submitButton.innerHTML = originalText;
+                
+                // Si el spinner estaba oculto por d-none, asegurar que se mantenga así
+                const newSpinner = submitButton.querySelector('.spinner-border');
+                if(newSpinner) newSpinner.classList.add('d-none');
+            }, 500);
         }
     });
 });
