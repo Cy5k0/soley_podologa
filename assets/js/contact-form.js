@@ -94,17 +94,39 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        // Comprobar el límite de envíos
-        if (!checkRateLimit()) {
-            return;
-        }
-
         // Obtener los valores de los campos del formulario
         const name = document.getElementById('name').value.trim();
         const email = document.getElementById('email').value.trim();
         const phone = document.getElementById('phone').value.trim();
         const service = document.getElementById('service').value;
         const message = document.getElementById('message').value.trim();
+        const honeypot = document.getElementById('website_url')?.value;
+
+        // Validar el honeypot (Anti-spam): si está lleno, es casi seguro un bot
+        if (honeypot) {
+            console.warn("Posible bot detectado mediante honeypot. Envío abortado silenciosamente.");
+            // Simulamos éxito para confundir al bot
+            showMessage("Tu mensaje ha sido enviado con éxito. ¡Gracias!", "success");
+            form.reset();
+            form.classList.remove('was-validated');
+            return;
+        }
+
+        // Validar contenido del mensaje (Anti-spam): bloquear si contiene múltiples enlaces
+        const urlRegex = /(https?:\/\/[^\s]+)|(www\.[^\s]+)/gi;
+        const urls = message.match(urlRegex) || [];
+        if (urls.length > 1) {
+            console.warn("Posible spam detectado: múltiples enlaces en el mensaje.");
+            showMessage("Tu mensaje ha sido enviado con éxito. ¡Gracias!", "success");
+            form.reset();
+            form.classList.remove('was-validated');
+            return;
+        }
+
+        // Comprobar el límite de envíos reales
+        if (!checkRateLimit()) {
+            return;
+        }
 
         const submitButton = document.getElementById('submitButton');
         const spinner = submitButton.querySelector('.spinner-border');

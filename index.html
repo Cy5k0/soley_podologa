@@ -609,6 +609,11 @@ Puedes agendar tu cita completando el formulario a continuación, llamando al +5
                                         </label>
                                         <div class="invalid-feedback" role="alert">Debes aceptar los términos y condiciones.</div>
                                     </div>
+                                    <!-- Honeypot anti-spam -->
+                                    <div class="d-none" aria-hidden="true">
+                                        <label for="website_url">Sitio Web</label>
+                                        <input type="text" id="website_url" name="website_url" tabindex="-1" autocomplete="off">
+                                    </div>
                                     <div class="d-grid">
                                         <button class="btn btn-primary btn-lg py-3" type="submit" id="submitButton" aria-label="Enviar formulario de contacto">
                                             <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
