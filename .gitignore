@@ -32,3 +32,7 @@ thumbs.db
 
 # AWS related files
 .aws-sam/
+
+
+# markdown files
+*.md

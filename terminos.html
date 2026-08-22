@@ -67,6 +67,16 @@
       margin-bottom: 8px;
     }
 
+    .update-note {
+      background: #eef7f4;
+      border-left: 4px solid var(--secondary-teal);
+      padding: 12px 18px;
+      font-size: 0.9rem;
+      color: #444;
+      margin-bottom: 30px;
+      border-radius: 4px;
+    }
+
     .back-link {
       display: inline-block;
       margin-top: 30px;
@@ -99,6 +109,11 @@
   </header>
 
   <div class="container">
+
+    <p class="update-note">Última actualización: agosto de 2026. Este documento incorpora referencias a la Ley
+      N°21.663 (Marco de Ciberseguridad e Infraestructura Crítica de la Información) y a la Ley N°21.719 de
+      Protección de Datos Personales.</p>
+
     <section id="terminos">
       <h2>1. Términos y Condiciones</h2>
       <p>Al utilizar el formulario de contacto de <strong>www.podologasoley.com</strong>, usted acepta los siguientes
@@ -123,7 +138,8 @@
 
     <section id="privacidad">
       <h2>2. Política de Privacidad</h2>
-      <p>En cumplimiento con la normativa chilena de protección de datos personales (Ley 19.628), le informamos cómo
+      <p>En cumplimiento con la normativa chilena de protección de datos personales, incluyendo la Ley N°19.628 sobre
+        protección de la vida privada y la Ley N°21.719 de Protección de Datos Personales, le informamos cómo
         manejamos su información:</p>
 
       <h3>2.1. Datos Recolectados</h3>
@@ -141,9 +157,19 @@
         <li>Gestionar y responder su solicitud de información o cita.</li>
         <li>Mantener una ficha clínica básica en caso de concretarse la atención.</li>
       </ul>
-      <p><strong>Procesamiento Técnico:</strong> El envío del formulario utiliza servicios de <strong>AWS (Amazon Web
-          Services)</strong> de forma segura mediante protocolo HTTPS, garantizando que el mensaje llegue directamente a
-        nuestro equipo sin ser almacenado en bases de datos públicas o de terceros para fines comerciales.</p>
+      <p><strong>Procesamiento Técnico:</strong> El envío del formulario se procesa de forma segura mediante
+        protocolo HTTPS utilizando servicios de infraestructura en la nube de <strong>Amazon Web Services
+          (AWS)</strong>. Específicamente:</p>
+      <ul>
+        <li><strong>Amazon SNS (Simple Notification Service):</strong> se utiliza para transmitir de forma
+          instantánea y cifrada el contenido del formulario a nuestro equipo, sin quedar publicado ni indexado en
+          páginas web ni bases de datos de acceso público.</li>
+        <li><strong>Amazon Cognito:</strong> se utiliza para gestionar el control de acceso y la autenticación de los
+          servicios que procesan su solicitud, restringiendo el acceso a la información únicamente a los sistemas y
+          personas autorizadas.</li>
+      </ul>
+      <p>Sus datos no son almacenados en bases de datos públicas ni compartidos con terceros para fines comerciales o
+        de prospección.</p>
 
       <h3>2.3. Confidencialidad y Seguridad</h3>
       <p>Nos comprometemos a no vender, ceder ni compartir su información con terceros. Sus datos son tratados bajo
@@ -152,6 +178,46 @@
       <!-- <h3>2.4. Sus Derechos (ARCO)</h3>
       <p>Usted tiene derecho en cualquier momento a solicitar el acceso, rectificación, cancelación u oposición al tratamiento de sus datos. Para ejercer estos derechos, puede escribirnos a:</p>
       <p><strong>Email:</strong> <a href="mailto:contacto@podologasoley.com">contacto@podologasoley.com</a></p> -->
+    </section>
+
+    <hr>
+
+    <section id="ciberseguridad">
+      <h2>3. Ciberseguridad y Gestión de Incidentes</h2>
+      <p>En línea con los principios de la Ley N°21.663, Ley Marco de Ciberseguridad e Infraestructura Crítica de la
+        Información, y aun cuando este sitio web no constituye infraestructura crítica ni un servicio esencial en
+        los términos de dicha ley, adoptamos medidas razonables y proporcionales para proteger la información que
+        usted nos confía:</p>
+
+      <h3>3.1. Medidas de Seguridad</h3>
+      <ul>
+        <li>Transmisión de datos exclusivamente mediante conexiones cifradas (HTTPS/TLS).</li>
+        <li>Uso de servicios de infraestructura en la nube (AWS) con controles de acceso basados en autenticación
+          (Amazon Cognito) y mensajería gestionada (Amazon SNS).</li>
+        <li>Acceso a la información restringido al personal estrictamente necesario para la atención de pacientes.</li>
+        <li>Revisión periódica de las configuraciones de seguridad de los servicios utilizados.</li>
+      </ul>
+
+      <h3>3.2. Gestión de Incidentes</h3>
+      <p>En caso de detectarse un incidente de ciberseguridad que pudiera comprometer la confidencialidad, integridad
+        o disponibilidad de sus datos personales, adoptaremos las medidas de contención pertinentes y, cuando
+        corresponda conforme a la normativa vigente, informaremos oportunamente a los usuarios afectados y a las
+        autoridades competentes.</p>
+
+      <h3>3.3. Marco Normativo Aplicable</h3>
+      <p>Este sitio opera considerando el marco normativo chileno vigente en materia de datos y ciberseguridad,
+        compuesto principalmente por:</p>
+      <ul>
+        <li><strong>Ley N°19.628</strong> sobre Protección de la Vida Privada.</li>
+        <li><strong>Ley N°21.719</strong> de Protección de Datos Personales, cuya plena vigencia comienza el 1 de
+          diciembre de 2026.</li>
+        <li><strong>Ley N°21.663</strong>, Ley Marco de Ciberseguridad e Infraestructura Crítica de la Información,
+          vigente desde marzo de 2025, cuyos principios de gestión de riesgos y buenas prácticas de seguridad
+          adoptamos de forma voluntaria como estándar de referencia.</li>
+      </ul>
+      <p style="font-size:0.9rem;color:#666;">Esta sección tiene fines informativos y no constituye asesoría legal.
+        Ante dudas específicas sobre el cumplimiento normativo, se recomienda consultar con un profesional del
+        derecho.</p>
     </section>
 
     <a href="/" class="back-link">&larr; Volver al Inicio</a>
