@@ -2,7 +2,7 @@
 
 /* Hero Section for Tips Page */
 .hero-section-tips {
-    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-teal) 100%), url('https://images.unsplash.com/photo-1605548154442-57b57b1d06a5?q=80&w=2070&auto=format&fit=crop') no-repeat center center;
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-teal) 100%), url('../img/cuidado-pies-secado-de-pies.webp') no-repeat center center;
     background-size: cover;
     min-height: 60vh;
     position: relative;
@@ -241,13 +241,13 @@
 }
 
 /* Scroll Animations (requires JS intersection observer) */
-.reveal-on-scroll {
+.js .reveal-on-scroll {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.reveal-on-scroll.is-visible {
+.js .reveal-on-scroll.is-visible {
     opacity: 1;
     transform: translateY(0);
 }
