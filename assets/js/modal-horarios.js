@@ -49,6 +49,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // 6. Animaciones (manejadas por las clases de Bootstrap .fade)
     // Las animaciones de entrada/salida se controlan con CSS a través de las clases que Bootstrap añade.
-
-    console.log('Modal de horarios inicializado correctamente.');
 });

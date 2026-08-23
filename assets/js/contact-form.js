@@ -41,7 +41,7 @@ function showMessage(text, type) {
     const alertMsg = document.createElement('div');
     alertMsg.className = `alert alert-${type === 'error' ? 'danger' : 'success'} alert-dismissible fade show mt-3`;
     alertMsg.setAttribute('role', 'alert');
-    alertMsg.innerHTML = `<strong>${text}</strong><button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>`;
+    alertMsg.innerHTML = `<strong>${text}</strong><button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>`;
     alertContainer.appendChild(alertMsg);
 }
 

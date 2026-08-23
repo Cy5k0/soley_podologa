@@ -1,11 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    
-    // Initialize Bootstrap components
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl);
-    });
-
     // Back to top button
     const backToTop = document.getElementById('backToTop');
     if (backToTop) {
@@ -65,8 +58,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-
-    
     // Mobile menu improvements
     const mobileToggle = document.querySelector('.navbar-toggler');
     if (mobileToggle) {

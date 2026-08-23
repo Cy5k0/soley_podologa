@@ -71,7 +71,6 @@
   font-size: 1.1rem;
   border-bottom: 1px solid var(--modal-border-color);
   transition: var(--transition);
-  align-items: center;
 }
 
 .horarios-list li:last-child {
